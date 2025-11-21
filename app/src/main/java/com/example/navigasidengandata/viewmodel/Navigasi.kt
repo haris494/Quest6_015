@@ -13,6 +13,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.navigasidengandata.view.FormIsian
 
 enum class Navigasi {
     Formulir,
@@ -38,6 +39,15 @@ fun SiswaApp(
             composable(route = Navigasi.Formulir.name){
 
                 val konteks = LocalContext.current
+
+                FormIsian(
+                    pilihanJK = JenisK,
+                    onSubmitButtonClicked = {
+                        viewModel.setSiswa(it)
+                        navController.navigate(Navigasi.Detail.name)
+                    }
+                )
+            }
         }
 
 }
