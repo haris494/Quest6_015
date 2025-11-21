@@ -7,6 +7,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 
 enum class Navigasi {
@@ -24,4 +25,7 @@ fun SiswaApp(
     Scaffold { isiRuang->
 
         val uiState = viewModel.statusUI.collectAsState()
+
+        NavHost(
+            navController = navController,
 }
