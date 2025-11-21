@@ -2,9 +2,13 @@ package com.example.navigasidengandata.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.material3.DividerDefaults.Thickness
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -55,6 +59,17 @@ fun FormIsian(
                     txtNama = it
                 },
             )
+            HorizontalDivider(modifier = Modifier
+                .padding(all = 20.dp)
+                .width(width = 250.dp), thickness = Thickness, color = Color.Red)
+            Row{
+                pilihanJK.forEach { item ->
+                    Row (modifier = Modifier.selectable(
+                        selected = txtGender == item,
+                        onClick = {
+                            txtGender = item
+                        }
+                    ),
 
 
 }
