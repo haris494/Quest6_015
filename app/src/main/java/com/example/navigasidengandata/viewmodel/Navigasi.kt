@@ -7,9 +7,11 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 
 enum class Navigasi {
@@ -33,5 +35,9 @@ fun SiswaApp(
             startDestination = Navigasi.Formulir.name,
             modifier = Modifier.padding(isiRuang)
         ){
+            composable(route = Navigasi.Formulir.name){
+
+                val konteks = LocalContext.current
+        }
 
 }
