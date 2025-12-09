@@ -1,4 +1,3 @@
-<img width="1886" height="4880" alt="carbon" src="https://github.com/user-attachments/assets/8f20b58e-466f-493f-86bf-4a4b1f1b5015" />
-<img width="1650" height="3910" alt="carbon (1)" src="https://github.com/user-attachments/assets/23fd09c7-d680-4eaf-b197-2db05d4968c6" />
-<img width="1582" height="1080" alt="carbon (3)" src="https://github.com/user-attachments/assets/25a3dee3-ab5d-49e9-8c47-40108c06233b" />
-<img width="1700" height="2868" alt="carbon (2)" src="https://github.com/user-attachments/assets/8598f40c-0535-4308-9125-cf2e44cfc448" />
+<img width="360" height="740" alt="Screenshot_20251209_183836" src="https://github.com/user-attachments/assets/3e15e635-7729-4932-8059-97e367b8bcc3" />
+<img width="360" height="740" alt="Screenshot_20251209_183601" src="https://github.com/user-attachments/assets/323ca0b9-7b10-4141-b62e-4fc3647174fd" />
+<img width="360" height="740" alt="Screenshot_20251209_183754" src="https://github.com/user-attachments/assets/ca44b0ea-db1f-4564-8010-e418c4bc6ce3" />
