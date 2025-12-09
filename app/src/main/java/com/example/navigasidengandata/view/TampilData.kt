@@ -23,43 +23,31 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.navigation.R
+import com.example.questnavigasitugas.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TampilData(
-    statusUiSiswa: Siswa,
-    onBackButtonCliked: () -> Unit
-) {
+    onBackBtnClick:()-> Unit
+){
     val items = listOf(
-        Pair(stringResource(id = R.string.nama_lengkap), statusUiSiswa.nama),
-        Pair(stringResource(id = R.string.jenis_kelamin), statusUiSiswa.gender),
-        Pair(stringResource(id = R.string.alamat), statusUiSiswa.alamat)
+        Pair(stringResource(R.string.nama_lengkap), "Contoh Nama"),
+        Pair(stringResource(R.string.jenis_kelamin), "Isinya"),
+        Pair(stringResource(R.string.alamat), "Yogyakarta")
     )
-    Scaffold(
-        modifier = Modifier,
-        topBar = {
+    Scaffold(modifier = Modifier,
+        {
             TopAppBar(
-                title = {
-                    Text(
-                        text = stringResource(id = R.string.tampilan_data),
-                        color = Color.White
-                    )
-                },
-                colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = colorResource(id = R.color.teal_700))
+                title = {Text(stringResource(id = R.string.Tampil), color = Color.White)},
+                colors = TopAppBarDefaults.mediumTopAppBarColors(colorResource(R.color.teal_200))
             )
-        }
-    ) { isiRuang ->
-        Column(modifier = Modifier.padding(paddingValues = isiRuang),
-            verticalArrangement = Arrangement.SpaceBetween
-        ) {
-            Column(
-                modifier = Modifier.padding(all = dimensionResource(id = R.dimen.padding_medium)),
-                verticalArrangement = Arrangement.spacedBy(space = dimensionResource(id = R.dimen.padding_small))
-            ) {
+        }){ isiRuang->
+        Column(modifier = Modifier.padding(isiRuang),
+            verticalArrangement = Arrangement.SpaceBetween) {
+            Column(modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium))) {
                 items.forEach { item ->
                     Column {
-                        Text(text = item.first, fontSize = 16.sp)
+                        Text(text = item.first.uppercase(), fontSize = 18.sp)
                         Text(
                             text = item.second,
                             fontWeight = FontWeight.Bold,
@@ -69,17 +57,14 @@ fun TampilData(
                     }
                     HorizontalDivider(thickness = 1.dp, color = Color.Cyan)
                 }
-            }
-
-            Spacer(modifier = Modifier.height(height = 10.dp))
-
-            Button (
-                modifier = Modifier.fillMaxWidth(),
-                onClick = { onBackButtonCliked() }
-            ){
-                Text(text = stringResource(id = R.string.back))
+                Spacer(modifier = Modifier.height(15.dp))
+                Button(
+                    modifier = Modifier.fillMaxWidth(),
+                    onClick = onBackBtnClick
+                ) {
+                    Text(text = stringResource(R.string.back))
+                }
             }
         }
     }
 }
-
